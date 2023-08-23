@@ -1,24 +1,24 @@
-def main():
+def main(lst_inputs: list) -> float:
 
     # Calculate and return intrinsic value
     return intrinsic_value_calc(
-        operating_cash_flow=7064.00,  # in millions
-        total_debt=9602.00,  # in millions
-        cash_short_term_investment=13977.00,  # in millions
-        cash_flow_growth_rate_short_term=0.1836,  # in percent
-        cash_flow_growth_rate_mid_term=0.15,  # in percent
-        cash_flow_growth_rate_long_term=0.0418,  # in percent
+        operating_cash_flow=lst_inputs[0], #7064.00,  # in millions
+        total_debt= lst_inputs[1], # 9602.00,  # in millions
+        cash_short_term_investment= lst_inputs[2], #13977.00,  # in millions
+        cash_flow_growth_rate_short_term= lst_inputs[3], #0.1836,  # in percent
+        cash_flow_growth_rate_mid_term= lst_inputs[4], #0.15,  # in percent
+        cash_flow_growth_rate_long_term= lst_inputs[5] ,#0.0418,  # in percent
         number_of_short_term_years=5,
         number_of_mid_term_years=5,
         number_of_long_term_years=10,
-        number_of_shares_outstanding=977.0,  # in millions
+        number_of_shares_outstanding= lst_inputs[6], #977.0,  # in millions
         beta=1.2  # in percent
     )
 
 
 # Calculate intrinsic value
 
-1 - (209.00/262.33)
+# 1 - (209.00/262.33)
 
 
 def intrinsic_value_calc(
@@ -221,3 +221,5 @@ def projected_cash_flow_discounted_calc(
 
 if __name__ == '__main__':
     main()
+
+# main([68255125504 / 1000000, 29432000512/ 1000000, 118331998208/ 1000000, 0.2035, 0.162, 0.081, 5800999936/ 1000000, 1.061309, 128.93])
